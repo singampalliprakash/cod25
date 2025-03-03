@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.InputMismatchException;
+public class Main
+{
+	public static void main(String[] args) {
+	    int[] elements ={0,1,5,7,9};
+	    Scanner sc= new Scanner(System.in);
+	    try{
+	        int index1=sc.nextInt();
+	        int index2=sc.nextInt();
+	        int num1=elements[index1];
+	        int num2=elements[index2];
+	        int c=num1/num2;
+	        System.out.println("Array elements:"+c);
+	    }
+	    catch(InputMismatchException e){
+	        System.out.println("Error!enter correct Integers:");
+	    }
+	    catch(ArrayIndexOutOfBoundsException e1){
+	        System.out.println("Error!enter the correct index:");
+	    }
+		catch(ArithmeticException e2){
+	        System.out.println("Error!cannot devide with Zero");
+	    }
+		
+	}
+}
